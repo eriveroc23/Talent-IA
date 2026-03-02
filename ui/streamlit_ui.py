@@ -13,7 +13,7 @@ def main():
         initial_sidebar_state="expanded"
     )
     
-    st.title("📄 Sistema de Evaluación de CVs con IA")
+    st.title("📄 Talent-IA: Automatización de Gabinete para la Evaluación de Perfiles Técnicos.")
     st.markdown("""
     **Analiza currículums y evalúa candidatos de manera objetiva usando IA**
     
@@ -57,25 +57,27 @@ def procesar_entrada():
         height=250,
         placeholder="""Ejemplo detallado:
 
-**Puesto:** Desarrollador Frontend Senior
+*Título del Puesto: Coordinador de Supervisión de Túneles y Estructuras Ferroviarias
 
-**Requisitos obligatorios:**
-- 3+ años de experiencia en desarrollo frontend
-- Dominio de React.js y JavaScript/TypeScript
-- Experiencia con HTML5, CSS3 y frameworks CSS (Bootstrap, Tailwind)
-- Conocimiento de herramientas de build (Webpack, Vite)
+ID de Licitación: LO-09-D00-009D00999-N-46-2025 
 
-**Requisitos deseables:**
-- Experiencia con Next.js o similares
-- Conocimientos de testing (Jest, Cypress)
-- Familiaridad con metodologías ágiles
-- Inglés intermedio-avanzado
+1. Perfil Académico y Normativo
+•	Formación: Ingeniería Civil con Cédula Profesional vigente (Indispensable).
+•	Posgrado: Especialidad o Maestría en Geotecnia, Vías Terrestres o Estructuras.
 
-**Responsabilidades:**
-- Desarrollo de interfaces de usuario responsivas
-- Colaboración con equipos de diseño y backend
-- Optimización de rendimiento de aplicaciones web
-- Mantenimiento de código legacy""",
+2. Experiencia Técnica Requerida (Matriz de Ponderación 40%)
+•	Experiencia General: Mínimo 12 años de ejercicio profesional contados a partir de la expedición de la cédula.
+•	Experiencia Específica: Mínimo 8 años como Residente o Coordinador de Supervisión en proyectos de túneles excavados mediante método convencional (NATM) o TBM.
+•	Hitos Requeridos: Haber participado en al menos 2 proyectos de infraestructura ferroviaria de pasajeros con longitud superior a 5 km.
+
+3. Competencias y Software (Matriz de Ponderación 35%)
+•	Software: Dominio avanzado de AutoCAD Civil 3D, Plaxis 2D/3D (para análisis geotécnico) y Microsoft Project/Primavera P6 para control de ruta crítica.
+•	Normativa: Conocimiento profundo de las normas de la SICT, estándares AREMA (ferroviarios) y protocolos de seguridad en túneles (NFPA 130).
+
+4. Habilidades Blandas y Coherencia (Matriz de Ponderación 25%)
+•	Capacidad de gestión de frentes de obra simultáneos.
+•	Experiencia en la elaboración de informes técnicos para auditorías de la Función Pública.
+""",
         help="Sé específico sobre requisitos técnicos, experiencia requerida y responsabilidades del puesto."
     )
     
@@ -201,7 +203,7 @@ def mostrar_resultados(resultado: AnalisisCV):
     col1, col2 = st.columns(2)
     with col1:
         st.info(f"**👨‍💼 Nombre:** {resultado.nombre_candidato}")
-        st.info(f"**⏱️ Experiencia:** {resultado.experiencia_años} años")
+        st.info(f"**⏱️ Experiencia:** {resultado.experiencia_anios} años")
     
     with col2:
         st.info(f"**🎓 Educación:** {resultado.education}")
